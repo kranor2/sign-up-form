@@ -12,17 +12,40 @@
             <img src="assets/odin-lined.png">
             <h1>ODIN</h1>
         </div>
-        <p>Photo by <a href="https://www.pexels.com/@cottonbro/">cottonbro studio</a> on <a href="https://www.pexels.com/photo/purple-and-orange-light-on-a-concert-4722053/"></a></p>
+        <p>Photo by <a href="https://www.pexels.com/@cottonbro/">cottonbro studio</a> on <a href="https://www.pexels.com/photo/purple-and-orange-light-on-a-concert-4722053/">Pexels</a></p>
     </div>
     <div class="content-block">
         <div class="intro">
             <h3>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <i>now</i> to get started.</h3>
             <h3>You <i>know</i> you want to.</h3>
         </div>
-        <div class="form-container">
-            <h3>Let's do this!</h3>
-            <form></form>
-        </div>  
+        <form action="example.com/path" method="post">
+            <div class="form-container">
+                <h3>Let's do this!</h3>
+                <div class="name-row">    
+                    <label for="first_name">FIRST NAME</label>
+                    <input type="text" id="first_name" placeholder="Thor" name="first_name">
+
+                    <label for="last_name">LAST NAME</label>
+                    <input type="text" id="last_name" placeholder="Odinson" name="last_name">
+                </div>
+                <div class-="contact-row">    
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="email">
+
+                    <label for="phone_number">PHONE NUMBER</label>
+                    <input type="tel" id="phone_number" name="phone_number">
+                </div>
+                <div class="pass-row">    
+                    <label for="pwd">PASSWORD</label>
+                    <input type="password" id="pwd" name="pwd">
+
+                    <label for="pwd-confirm">CONFIRM PASSWORD</label>
+                    <input type="password" id="pwd-confirm" name="pwd-confirm">
+                </div>  
+            </div>
+            <button type="submit">Create Account</button>      
+        </form>
         <p>Already have an account? <b>Log in</b></p>  
     </div>
 </body>
