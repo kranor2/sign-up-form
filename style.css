@@ -17,7 +17,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -162,175 +161,129 @@ table {
  
 
 /* Page Styling */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: "Roboto", sans-serif;
+}
+
 body {
+    height: 100vh;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 img {
-    height: 100px;
-    width: auto;
+    max-height: 100%;
 }
 
-h1 {
-    font-family: "Caesar Dressing", sans-serif;
-    font-size: 72px;
-    color: white;
-    margin-left: 12px;
-}
-
-h3, p, label {
-    font-family: "Roboto", "Helvetica", sans-serif;
-}
-
-a {
-    color: #c7e1fc;
-}
-
-h3 {
-    font-size: 21px;
-    font-weight: 700;
-}
-
-label {
-    font-size: 10px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-input {
-    font-family: "Roboto", "Helvetica", sans-serif;
-    font-weight: 400;
-    height: 24px;
-    width: 250px;
-    border: solid lightgrey 0.75px;
-    border-radius: 2px;
-    margin-top: 4px;
-}
-
-input:focus {
-    border: solid blue 0.5px;
-    box-shadow: 4px 4px 4px lightgrey;
-}
-
-input:invalid {
-    border: solid red 1px;
-}
-
-input::placeholder {
-    font-weight: 100;
-}
-
-button {
-    font-family: "Roboto", "Helvetica", sans-serif;
-    font-weight: 700;
-    color: white;
-    background-color: #6d0815;
-    border: 0;
-    border-radius: 8px;
-    box-shadow: 4px 4px 4px lightgrey;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 36px;
-    padding-right: 36px;
-    margin-top: 36px;
-    margin-left: 48px;
-    margin-right: 200px;
-    cursor: pointer;
+.signup {
+    display: flex;
+    align-items: center;
+    height: 700px;
+    max-width: 90%;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px 2px lightgrey;
+    overflow: hidden;
 }
 
 .image-block {
     background-image: url(assets/pexels-cottonbro-studio-4722053.jpg);
-    background-size: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 125%;
+    height: 100%;
+    width: 35%;
 }
 
 .hero {
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 120px;
-    width: 40vw;
-    margin-bottom: 400px;
+    margin-top: 30%;
+    background: rgba(0, 0, 0, 0.5);
+    height: 150px;
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.img-credit {
+    font-family: "Caesar Dressing", sans-serif;
+    font-size: 3rem;
     color: white;
-    padding-bottom: 8px;
 }
 
 .content-block {
-    height: 100vh;
-    width: 60vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    height: 100%;
+    max-width: 65%;
+    background-color: #f2f2f2;
 }
 
 .intro {
-    background-color: #f2f2f2;
-    padding-left: 48px;
-    padding-right: 200px;
-    padding-top: 120px;
-    padding-bottom: 64px;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 33%;
+    justify-content: space-around;
+    font-size: 1.25rem;
+    font-weight: 700;
+    width: 90%;
 }
 
-.blurb {
-    margin-bottom: 36px;
+form {
+    height: 77%;
+}
+
+form h3 {
+    font-size: 1.25rem;
 }
 
 .form-container {
-    padding-left: 48px;
-    padding-right: 250px;
-    padding-bottom: 24px;
-    box-shadow: 2px 4px 2px -2px lightgrey;
+    background-color: #ffffff;
+    padding: 2rem 2rem;
+    box-shadow: 0px 3px 5px -2px lightgrey;
+    height: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-around;
+    margin-bottom: 3rem;
 }
 
-.form-row {
+fieldset {
+    border: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px; 
+    gap: 3rem;
 }
 
 .field {
-    width: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    width: 33%;
+}
+
+.field label {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+form input {
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    padding: 7px;
+    font-size: 14px;
 }
 
 .footer {
-    background-color: #f2f2f2;
+    padding-left: 2rem;
 }
 
-#login {
-    padding-top: 36px;
-    padding-left: 48px;
-    padding-right: 200px;
-    padding-bottom: 108px;
-}
-
-#begin {
-    padding-top: 18px;
-    padding-bottom: 24px;
-}
-
-#last, #phone, #confirm {
-    margin-left: 75px;
-}
-
-#now {
-    margin-top: 8px;
+button {
+    background-color: #6b0815;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 40px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
