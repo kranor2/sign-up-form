@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kranor2 | Sign-Up Form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="image-block">
@@ -12,41 +15,55 @@
             <img src="assets/odin-lined.png">
             <h1>ODIN</h1>
         </div>
-        <p>Photo by <a href="https://www.pexels.com/@cottonbro/">cottonbro studio</a> on <a href="https://www.pexels.com/photo/purple-and-orange-light-on-a-concert-4722053/">Pexels</a></p>
+        <p class="img-credit">Photo by <a href="https://www.pexels.com/@cottonbro/">cottonbro studio</a> on <a href="https://www.pexels.com/photo/purple-and-orange-light-on-a-concert-4722053/">Pexels</a></p>
     </div>
     <div class="content-block">
         <div class="intro">
-            <h3>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <i>now</i> to get started.</h3>
-            <h3>You <i>know</i> you want to.</h3>
+            <div class="blurb">
+                <h3>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</h3>
+                <h3 id="now">Sign up <i>now</i> to get started.</h3>
+            </div>
+            <h3 id="adline">You <i>know</i> you want to.</h3>
         </div>
-        <form action="example.com/path" method="post">
+        <form action="#" method="get">
             <div class="form-container">
-                <h3>Let's do this!</h3>
-                <div class="name-row">    
-                    <label for="first_name">FIRST NAME</label>
-                    <input type="text" id="first_name" placeholder="Thor" name="first_name">
-
-                    <label for="last_name">LAST NAME</label>
-                    <input type="text" id="last_name" placeholder="Odinson" name="last_name">
+                <h3 id="begin">Let's do this!</h3>
+                <div class="form-row">
+                    <div class="field" id="first">    
+                        <label for="first_name">FIRST NAME</label>
+                        <input type="text" id="first_name" placeholder="Thor" name="first_name">
+                    </div>    
+                    <div class="field" id="last">
+                        <label for="last_name">LAST NAME</label>
+                        <input type="text" id="last_name" placeholder="Odinson" name="last_name">
+                    </div>    
                 </div>
-                <div class-="contact-row">    
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email">
-
-                    <label for="phone_number">PHONE NUMBER</label>
-                    <input type="tel" id="phone_number" name="phone_number">
+                <div class="form-row">
+                    <div class="field" id="address">    
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="field" id="phone">    
+                        <label for="phone_number">PHONE NUMBER</label>
+                        <input type="tel" id="phone_number" name="phone_number" pattern="(\d{3}[\-]\d{3}[\-]\d{4})">
+                    </div>    
                 </div>
-                <div class="pass-row">    
-                    <label for="pwd">PASSWORD</label>
-                    <input type="password" id="pwd" name="pwd">
-
-                    <label for="pwd-confirm">CONFIRM PASSWORD</label>
-                    <input type="password" id="pwd-confirm" name="pwd-confirm">
+                <div class="form-row">    
+                    <div class="field" id="pass">
+                        <label for="pwd">PASSWORD</label>
+                        <input type="password" id="pwd" name="pwd">
+                    </div>  
+                    <div class="field" id="confirm">  
+                        <label for="pwd-confirm">CONFIRM PASSWORD</label>
+                        <input type="password" id="pwd-confirm" name="pwd-confirm">
+                    </div>    
                 </div>  
             </div>
-            <button type="submit">Create Account</button>      
-        </form>
-        <p>Already have an account? <b>Log in</b></p>  
+            <div class="footer">
+                <button type="submit">Create Account</button>
+                <p id="login">Already have an account? <b>Log in</b></p>      
+            </div>    
+        </form>  
     </div>
 </body>
 </html>
